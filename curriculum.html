@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+
+  <style> 
+
+  html{
+  	    height: 150%;
+  	background: green; 
+    background: -webkit-linear-gradient(green, white); 
+    background: -o-linear-gradient(green, white); 
+    background: -moz-linear-gradient(green, white); 
+    background: linear-gradient(green, white); 
+  }
+
+  h1{
+  	background-color: #006600;
+  	color: white;
+  	border-radius: 20px;
+  	width: 500px;
+  	padding: 20px;
+  }
+
+  h2{
+  	background-color: green;
+  	border-radius: 10px;
+  	width: 200px;
+  	padding: 15px;
+  }
+
+  h3{
+  	background-color: #006600;
+  	border-radius: 10px;
+  	width: 200px;
+  	padding: 10px;
+  }
+
+  h4{
+  	background-color: #006600;
+  	border-radius: 10px;
+  	width: 200px;
+  	padding: 10px;
+  }
+
+  ul>li{
+  	list-style-type: none;
+  	background-color: green;
+  	padding: 10px;
+  	margin: 20px;
+  	border-radius: 10px;
+
+  }
+
+  .icon{
+  	color: white;
+  	background-color: green;
+  	padding: 10px;
+  	border-radius: 50px;
+    white-space: nowrap;
+    display:table;
+
+  }
+
+  .barra_vertical{
+  	background-color: #006600;
+  	border-radius: 10px;
+  	padding: 20px;
+  	float:left;
+  }
+
+ 	button {
+ 	background-color: green; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+	text-align: center;
+	margin: auto;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+    margin-top: 10px;
+    width: 130px;
+    height: 20px;
+    border-radius: 10px;
+
+	}
+
+	button:hover{
+	text-shadow: 0 0 5px white;
+    background-color: #22BB22;
+	}
+
+	button > p{ 
+		position: relative;
+		right: 20px;
+		bottom: 25px;
+	}
+	
+	#nombre{
+		position: relative;
+		float: left;
+		left: 100px;
+		width: 70%;
+	}
+
+	#datos{
+		background-color: #006600;
+		padding: 20px;
+		border-radius: 10px;
+		top: 120px;
+		position: absolute;
+		float: right;
+		right: 270px;
+		color:white;
+	}
+
+	#lenguages{
+		color: white;
+		background-color: #006600;
+		padding: 20px;
+		border-radius: 10px;
+		position: absolute;
+		float: right;
+		top: 450px;
+		right: 270px;
+
+	}
+
+	.barra_vertical{
+		position: absolute;
+		float:left;
+		top: 120px;
+		left: 110px;
+	}
+
+	.thing{
+		background-color: #006600;
+		color:white;
+		border-radius: 10px;
+		position: absolute;
+		float:left;
+		left: 300px;
+		top: 105px;
+		width: 450px;
+		height: auto;
+	}	
+
+	a{
+		padding: 10px;
+		color: white;
+		text-decoration: underline;
+
+
+	}
+
+	a:hover {
+    text-decoration: none;
+    text-shadow: 0 0 5px white;
+    border-radius: 10px;
+    background-color: #22BB22;
+
+	}
+
+  </style>
+
+  </head>
+  <body>
+   
+   <h1 id = "nombre">Juan Felipe Bojorges Rodríguez</h1>
+
+   <div id = "datos"> <p class= "icon">&#127968; Dirección</p> Salamanca 69, Roma norte, CDMX 
+ 		<p class= "icon">&#9742; Teléfono</p> 55-5297-1023
+		<p class= "icon">&#127874; Fecha de Nacimiento</p> 01-03-1995</div>
+
+   <div id = "lenguages">
+		<h2>&#128266; Lenguajes</h2>
+		<p>Inglés: Inglés intermedio-avanzado </p>
+	</div>
+
+	<div class="barra_vertical" style="width:130px">
+	  <button class="tablink" onclick="openThing(event, 'proyectos')"><p>Proyectos</p></button>
+	  <button class="tablink" onclick="openThing(event, 'herramientas')"><p>Herramientas</p></button>
+	  <button class="tablink" onclick="openThing(event, 'intereses')"><p>Intereses</p></button>
+	  <button class="tablink" onclick="openThing(event, 'trabajo')"><p>Trabajo</p></button>
+	  <button class="tablink" onclick="openThing(event, 'estudios')"><p>Estudios</p></button>
+
+	</div>
+
+
+   <div class= "container_c">
+	    <ul id = "proyectos", class= "thing", style="display:none">  
+
+	    	<h2> Proyectos</h2>
+
+	   		<li> Chiasmus of Fae: C (Danmakufu) <p> Un juego de disparos con patrones de movimiento de proyectiles basados en fórmulas matemáticas. </p></li>
+	   	
+	   		<li> Virus Blaster: Python (PyGame) <p> Un pequeño juego de disparos en donde la dificultad se ve afectada por 	el progreso del jugador. </p> </li>
+
+	   		<li> Flamable: C# (Unity) <p>Un juego de plataformas basado en el manejo de tiempo o recursos. </p></li>
+
+	   		<li>Clon de Quora: Ruby (Ruby on Rails) 
+			<p>Github: <a href="https://github.com/bluespheal/etapa2/tree/master/semana2/miercoles/quora">Link</a></p>
+	   		Un 	clon de quora en el cual los usuarios pueden crear una cuenta, hacer 	preguntas y recibir respuestas de otros.
+			</li>
+	
+  		</ul>
+	</div>
+
+	<div>
+	   <ul id = "herramientas", class= "thing", style="display:none"> 
+
+	   <h2> Herramientas</h2>
+
+	   <li>Lenguages de Programación: Ruby, Python, Javascript, C#, C, Basic.</li>
+	   <li>Sistemas Operativos: Windows, OSX, Linux.</li>
+	   <li>Software: Git, Gimp, Sublime Text, Unity.</li>
+	   <li> Frameworks: Ruby on Rails, Sinatra.</li>
+	   <li>Librerías: jQuery, Active Record, Unity.</li>
+	   <li>Bases de Datos: Postgresql.</li>
+	   <li>Tecnologías Web: HTML5, CSS, Ajax.</li>
+	   <li>Paradigmas: 	Modelo MVC, Programación Orientada a Objetos, Programación 	Orientada a Pruebas, Desarrollo ágil, Programación REST.</li>
+	   <li><a href="https://github.com/bluespheal">Github</a></li>
+
+	   </ul>
+	</div>
+
+
+	
+
+	<div >
+		
+		<ul id="intereses", class= "thing", style="display:none">
+			<h2>Intereses</h2>
+			<li>Diseño 	de Videojuegos</li>	
+			<li>Diseño 	Gráfico</li>
+			<li>Lógica 	de programación</li>
+		</ul>
+	</div>
+
+
+	<div> 
+		<ul  id= "trabajo", class= "thing", style="display:none">
+		<h2>Experiencia de trabajo</h2>
+			<li> 
+				<h3>Empleado de Registro de Datos</h3>
+				<h4 id ="trabajo_lugar">Zen3 Infosolutions(America) Inc</h4>
+				<h4 id ="trabajo_tiempo">SEP 2014 – ENE 2017</h4>
+				Encargado de verificar y corregir la información de negocios de México en la base de datos de 	Bing.com 
+			</li>
+
+			<li> 
+				<h3>Organización y control de expedientes del alumnado</h3>
+				<h4 id ="trabajo_lugar">ITESM Edo. México</h4>
+				<h4 id ="trabajo_tiempo">AGO 2014 - DIC 2015</h4>
+				Encargado de verificar y corregir la información de negocios de México en la base de datos de 	Bing.com 
+			</li>	
+
+		</ul>
+	</div>
+
+	<div > 
+		<ul id= "estudios", class= "thing", style="display:none">
+			<h2>Estudios</h2>
+			<li>
+				<h3>ITESM</h3>
+				<h4 id = "estudio_lugar">Campus Estado de México</h4>
+				<h4 id = "estudio_fecha">AGO 2014 – DIC 2015</h4>
+				Ingeniería 	en Sistemas Computacionales.
+			</li>
+
+			<li>
+				<h3>Codeacamp</h3>
+				<h4 id = "estudio_lugar">Codea</h4>
+				<h4 id = "estudio_fecha">ENE 2017 - 	</h4>
+				Desarrollador 	Web
+			</li>
+
+		</ul>
+	</div>
+
+	<script>
+		function openThing(evt, name) {
+		  var i, x, tablinks;
+		  x = document.getElementsByClassName("thing");
+		  for (i = 0; i < x.length; i++) {
+		     x[i].style.display = "none";
+		  }
+		  tablinks = document.getElementsByClassName("thing");
+		  for (i = 0; i < x.length; i++) {
+		      tablinks[i].className = tablinks[i].className.replace(" thing", ""); 
+		  }
+		  document.getElementById(name).style.display = "block";
+		  evt.currentTarget.className += " w3-red";
+		}
+	</script>
+
+  </body>
+</html>
